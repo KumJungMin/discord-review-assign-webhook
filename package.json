@@ -1,0 +1,14 @@
+{
+  "name": "discord-review-assign-webhook",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/KumJungMin/discord-review-assign-webhook.git",
+  "author": "KumJungMin <rmawjdals@naver.com>",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@octokit/core": "^4.2.1",
+    "discord-webhook-node": "^1.1.8",
+    "eslint": "^8.42.0"
+  }
+}

@@ -1,9 +1,8 @@
+import "dotenv/config";
 import { Webhook, MessageBuilder } from "discord-webhook-node";
 import PRAssign from "./msg/pr-assign.js";
 
-const hook = new Webhook(
-  "https://discord.com/api/webhooks/1117958910704353280/PWFWv7DISOxkA4dcRfSkLJrntdo_3xHCf3WCyZ2s-pFXsYpR1Jdq5FAhVzlqZ7qhdZm-"
-);
+const hook = new Webhook(process.env.HOOK_URL);
 
 async function sendMessage() {
   const msg = await PRAssign.getMessage();

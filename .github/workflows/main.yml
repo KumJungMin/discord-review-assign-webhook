@@ -23,9 +23,11 @@ jobs:
         run: |
           echo "ORG=$ORG" >> .env
           echo "AUTH_TOKEN=$AUTH_TOKEN" >> .env
+          echo "HOOK_URL=$HOOK_URL" >> .env
         env:
           ORG: ${{ secrets.ORG }}
           AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+          HOOK_URL: ${{ secrets.HOOK_URL }}
 
       - name: Run bot
         run: yarn serve

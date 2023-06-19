@@ -21,7 +21,7 @@ async function _getPRCountMap(repoNames) {
   if (!repoNames.length) return;
   const countMap = {};
   const assigneerList = await Promise.all(
-    repoNames.map((repoName) => getRepoAsssigneers(repoName))
+    repoNames.map((repoName) => _getRepoAssigneers(repoName))
   );
   const filteredList = assigneerList.map((data) =>
     data
@@ -34,7 +34,7 @@ async function _getPRCountMap(repoNames) {
   });
   return countMap;
 }
-async function getRepoAsssigneers(repoName) {
+async function _getRepoAssigneers(repoName) {
   const { data } = await octokit.request("GET /repos/{owner}/{repo}/pulls", {
     owner: process.env.ORG,
     repo: repoName,

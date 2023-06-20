@@ -39,7 +39,7 @@ async function _getRepoAssigneers(repoName) {
     owner: process.env.ORG,
     repo: repoName,
   });
-  return data.map((v) => v?.requested_reviewers);
+  return data.filter((v) => !v.draft).map((v) => v?.requested_reviewers);
 }
 function _getFormattedMsg(data) {
   const sortedEntries = Object.entries(data).sort((a, b) => b[1] - a[1]);

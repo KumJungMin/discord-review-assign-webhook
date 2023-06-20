@@ -18,7 +18,7 @@ async function _getRepoNames() {
   return data.map((v) => v.name);
 }
 async function _getPRCountMap(repoNames) {
-  if (!repoNames.length) return;
+  if (!repoNames.length) return {};
   const countMap = {};
   const assigneerList = await Promise.all(
     repoNames.map((repoName) => _getRepoAssigneers(repoName))
@@ -42,6 +42,8 @@ async function _getRepoAssigneers(repoName) {
   return data.filter((v) => !v.draft).map((v) => v?.requested_reviewers);
 }
 function _getFormattedMsg(data) {
+  if (!Object.keys(data).length) return "오늘은 PR이 없네요!";
+
   const sortedEntries = Object.entries(data).sort((a, b) => b[1] - a[1]);
   const formattedCountMap = sortedEntries.map(
     ([key, value]) => `- ${key}: ${value}`

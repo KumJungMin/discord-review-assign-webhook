@@ -22,7 +22,7 @@
 ---
 
 ## 관련 포스팅 보기
-> 해당 프로젝트 진행을 위해 사용했던 기술 포스팅을 확인하실 수 있습니다.
+> 프로젝트에서 사용한 기술에 대해 포스팅을 확인하실 수 있습니다.
 
 1. Github API로 내 조직의 할당 현황 정보 가져오기[ (링크) ](https://mong-blog.tistory.com/entry/%EB%82%B4-%EC%A1%B0%EC%A7%81%EC%9D%98-%EB%A6%AC%EB%B7%B0-%ED%95%A0%EB%8B%B9-%ED%98%84%ED%99%A9-%EA%B5%AC%ED%95%98%EA%B8%B01-github-API-%EC%82%AC%EC%9A%A9%EB%B2%95)
 2. Discord webhook으로 채널에 메시지 전송하기 [ (링크) ](https://mong-blog.tistory.com/entry/%EB%82%B4-%EC%A1%B0%EC%A7%81%EC%9D%98-%EB%A6%AC%EB%B7%B0-%ED%95%A0%EB%8B%B9-%ED%98%84%ED%99%A9-%EA%B5%AC%ED%95%98%EA%B8%B02-discord-webhook-%EC%82%AC%EC%9A%A9%EB%B2%95)

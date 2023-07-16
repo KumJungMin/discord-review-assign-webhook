@@ -1,4 +1,4 @@
-name: run discord bot
+name: run discord bot at 9am
 
 on:
   schedule:
@@ -30,4 +30,4 @@ jobs:
           HOOK_URL: ${{ secrets.HOOK_URL }}
 
       - name: Run bot
-        run: yarn serve
+        run: yarn msg-send

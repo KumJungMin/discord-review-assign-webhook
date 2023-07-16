@@ -1,7 +1,6 @@
 {
   "name": "discord-review-assign-webhook",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "https://github.com/KumJungMin/discord-review-assign-webhook.git",
   "author": "KumJungMin <rmawjdals@naver.com>",
   "license": "MIT",
@@ -13,7 +12,8 @@
     "eslint": "^8.42.0"
   },
   "scripts": {
-    "serve": "node index.js",
+    "msg-send": "node ./src/send.js",
+    "msg-remind": "node ./src/reminder.js",
     "lint": "eslint ."
   }
 }

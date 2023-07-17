@@ -8,7 +8,7 @@ async function sendMessage() {
   const msg = await PRAssign.getMessage();
   const embed = new MessageBuilder()
     .setTitle("오늘자 리뷰 할당 현황(remind)")
-    .setColor("#00ff00")
+    .setColor("#FFA500")
     .setDescription("⭐️ 야무진 오후 ⭐️\n💪 리뷰 할당 현황 다시 알려드려요!")
     .addField("할당 현황", msg)
     .addField(

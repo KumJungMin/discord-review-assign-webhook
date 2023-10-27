@@ -1,33 +1,33 @@
-name: run discord bot at 9am
+# name: run discord bot at 9am
 
-on:
-  schedule:
-    - cron: "0 0 * * *" # utc time
-jobs:
-  cron:
-    runs-on: ubuntu-latest
-    timeout-minutes: 3
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+# on:
+#   schedule:
+#     - cron: "0 0 * * *" # utc time
+# jobs:
+#   cron:
+#     runs-on: ubuntu-latest
+#     timeout-minutes: 3
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v2
 
-      - name: Setup Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: "16.x"
+#       - name: Setup Node
+#         uses: actions/setup-node@v1
+#         with:
+#           node-version: "16.x"
 
-      - name: Install dependencies
-        run: yarn install --prefer-offline
+#       - name: Install dependencies
+#         run: yarn install --prefer-offline
 
-      - name: Generate Environment Variables File
-        run: |
-          echo "ORG=$ORG" >> .env
-          echo "AUTH_TOKEN=$AUTH_TOKEN" >> .env
-          echo "HOOK_URL=$HOOK_URL" >> .env
-        env:
-          ORG: ${{ secrets.ORG }}
-          AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
-          HOOK_URL: ${{ secrets.HOOK_URL }}
+#       - name: Generate Environment Variables File
+#         run: |
+#           echo "ORG=$ORG" >> .env
+#           echo "AUTH_TOKEN=$AUTH_TOKEN" >> .env
+#           echo "HOOK_URL=$HOOK_URL" >> .env
+#         env:
+#           ORG: ${{ secrets.ORG }}
+#           AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+#           HOOK_URL: ${{ secrets.HOOK_URL }}
 
-      - name: Run bot
-        run: yarn msg-send
+#       - name: Run bot
+#         run: yarn msg-send
